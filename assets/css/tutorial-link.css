@@ -1,0 +1,82 @@
+/**
+ * YouTube Tutorial Link Styles
+ * CoreCount Fitness Planner
+ */
+
+/* Tutorial Link Container */
+.tutorial-link-container {
+    background-color: var(--bg-light);
+    border-left: 4px solid var(--primary-yellow);
+    border-radius: 6px;
+    padding: 16px;
+    margin-bottom: 20px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.tutorial-link-container:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 12px rgba(0,0,0,0.15);
+}
+
+/* Tutorial Link Header */
+.tutorial-link-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.tutorial-link-header i {
+    color: var(--primary-red);
+    font-size: 1.5rem;
+    margin-right: 10px;
+}
+
+.tutorial-link-header h6 {
+    color: var(--primary-blue);
+    font-weight: 600;
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+/* Tutorial Link Button */
+.tutorial-link-btn {
+    display: inline-flex;
+    align-items: center;
+    background-color: #e74c3c; /* Brighter red for better visibility */
+    color: white; /* Explicit white color for better contrast */
+    border: 2px solid #c0392b; /* Adding border for better definition */
+    border-radius: 20px;
+    padding: 8px 16px;
+    font-weight: 600; /* Increased font weight */
+    transition: all 0.2s ease;
+    text-decoration: none;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Adding shadow for depth */
+}
+
+.tutorial-link-btn:hover {
+    background-color: #c41e3a; /* Darker red */
+    transform: scale(1.05);
+    color: white;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3); /* Enhanced shadow on hover */
+}
+
+.tutorial-link-btn i {
+    margin-right: 8px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 767.98px) {
+    .tutorial-link-container {
+        padding: 12px;
+    }
+    
+    .tutorial-link-header h6 {
+        font-size: 1rem;
+    }
+    
+    .tutorial-link-btn {
+        padding: 6px 12px;
+        font-size: 0.9rem;
+    }
+}

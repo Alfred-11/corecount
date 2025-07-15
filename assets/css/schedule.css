@@ -1,0 +1,190 @@
+/**
+ * Schedule Page Styles
+ * CoreCount Fitness Planner
+ */
+
+/* Draggable Workout Items */
+.draggable-workout {
+    cursor: grab;
+    transition: all 0.2s ease;
+    margin-bottom: 12px;
+    border-left: 4px solid var(--primary-blue);
+    display: block;
+    padding: 15px;
+    background-color: var(--text-light);
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+    font-size: 1.05rem;
+    width: 100%;
+}
+
+.draggable-workout:hover {
+    background-color: var(--e-global-color-3266181);
+    transform: translateY(-2px);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.draggable-workout.dragging {
+    opacity: 0.5;
+    cursor: grabbing;
+}
+
+/* Schedule Drop Zones */
+.schedule-dropzone {
+    min-height: 100px;
+    transition: all 0.2s ease;
+}
+
+.schedule-dropzone.dragover {
+    background-color: rgba(26, 115, 232, 0.1);
+    box-shadow: inset 0 0 0 2px var(--primary-blue);
+}
+
+/* Calendar Day Styling */
+.calendar-day {
+    min-height: 160px;
+    padding: 10px;
+    position: relative;
+    transition: all 0.2s ease;
+    overflow-y: auto;
+    max-height: 200px;
+}
+
+.calendar-day.dragover {
+    background-color: rgba(26, 115, 232, 0.1);
+    box-shadow: inset 0 0 0 2px var(--primary-blue);
+}
+
+/* Date Cell Styling */
+.date-cell {
+    position: relative;
+    height: 100%;
+    min-height: 120px;
+    padding: 8px;
+}
+
+.day-number {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    font-weight: bold;
+    color: var(--primary-blue-dark);
+}
+
+.day-number.has-workouts {
+    color: var(--primary-blue);
+    font-weight: 700;
+}
+
+/* Scheduled Workouts */
+.scheduled-workouts {
+    margin-top: 25px;
+}
+
+.scheduled-workout, .workout-item {
+    background-color: var(--bg-light);
+    border-radius: 4px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-left: 4px solid var(--primary-blue);
+    font-size: 1rem;
+    display: block;
+    width: 100%;
+}
+
+/* Workout List Container */
+.workout-list {
+    max-height: 500px;
+    overflow-y: auto;
+    padding: 10px 5px;
+}
+
+/* Category-based coloring */
+.category-1 { border-left-color: var(--e-global-color-secondary); }
+.category-2 { border-left-color: var(--success-color); }
+.category-3 { border-left-color: var(--danger-color); }
+.category-4 { border-left-color: var(--e-global-color-accent); }
+.category-5 { border-left-color: var(--e-global-color-primary); }
+
+/* Completed workout styling */
+.workout-item.completed {
+    background-color: rgba(40, 167, 69, 0.2);
+    border-left-color: var(--success-color);
+}
+
+.workout-time {
+    display: block;
+    font-size: 0.8rem;
+    color: var(--e-global-color-text);
+}
+
+.workout-name {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.workout-actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 5px;
+}
+
+/* Workout List */
+.workout-list {
+    max-height: 600px;
+    overflow-y: auto;
+    padding: 15px;
+    margin-top: 10px;
+    border: 1px solid var(--e-global-color-31495be);
+    border-radius: 6px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+/* Available Workouts Card */
+.card.sticky-top {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    border-radius: 8px;
+    border: none;
+}
+
+.card-header.bg-primary {
+    border-radius: 8px 8px 0 0;
+    padding: 15px;
+}
+
+.card-header h5.card-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+/* Calendar Styling */
+.calendar-table {
+    margin: 0 auto;
+    width: 100%;
+}
+
+.calendar-table th {
+    background-color: var(--e-global-color-6f12657);
+    text-align: center;
+    padding: 12px;
+    font-weight: 600;
+}
+
+.calendar-table td {
+    width: 14.28%;
+    height: 140px;
+    vertical-align: top;
+    border: 1px solid var(--e-global-color-31495be);
+    padding: 0;
+}
+
+.has-workouts {
+    background-color: rgba(64, 106, 242, 0.05);
+}
+
+/* Today's cell styling */
+.calendar-day.today {
+    background-color: rgba(40, 167, 69, 0.05);
+    box-shadow: inset 0 0 0 2px var(--success-color);
+}

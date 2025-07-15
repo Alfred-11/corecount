@@ -1,0 +1,67 @@
+/**
+ * Icon Colors CSS
+ * CoreCount Fitness Planner
+ * 
+ * This file manages icon colors across the website
+ */
+
+/* Specific icon colors based on context */
+
+/* Article meta icons */
+.article-meta span i {
+    color: var(--e-global-color-secondary); /* Primary blue */
+}
+
+/* Benefit icons */
+.benefit-icon {
+    color: var(--primary-yellow); /* Original yellow color */
+}
+
+/* Mental health benefit icons */
+.mental-health-benefit h4 i {
+    color: var(--e-global-color-secondary); /* Primary blue */
+}
+
+/* Feature icons */
+.feature-icon {
+    color: var(--primary-yellow); /* Original yellow color */
+}
+
+/* Address icons in footer */
+address p i {
+    color: var(--accent-color); /* Primary yellow - this one stays yellow */
+}
+
+/* Social icons */
+.social-icon {
+    color: var(--e-global-color-3266181); /* White */
+}
+
+.social-icon:hover {
+    background: var(--accent-color);
+    color: var(--dark-color);
+}
+
+/* Sidebar icons */
+#sidebar ul li a i {
+    color: rgba(255, 255, 255, 0.8); /* White with transparency */
+}
+
+#sidebar ul li a:hover i,
+#sidebar ul li.active > a i {
+    color: var(--text-dark);
+}
+
+/* Ensure icons in buttons maintain appropriate contrast */
+.btn .fas,
+.btn .fa,
+.btn .far,
+.btn .fab {
+    color: inherit;
+}
+
+/* Ensure icons in carousel controls maintain appropriate contrast */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: invert(80%) sepia(54%) saturate(1000%) hue-rotate(360deg) brightness(105%) contrast(101%);
+}

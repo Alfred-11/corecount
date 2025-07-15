@@ -1,0 +1,254 @@
+/**
+ * Progress Page Styles
+ * CoreCount Fitness Planner
+ */
+
+/* Filter Results Card Styling */
+.filter-card {
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    border-radius: 12px;
+    border: none;
+    transition: all 0.3s ease;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.filter-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.18);
+}
+
+.filter-card .card-body {
+    padding: 24px;
+    background-color: var(--text-light);
+    border-radius: 12px;
+}
+
+.filter-card .card-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--primary-blue);
+    margin-bottom: 18px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--bg-light);
+}
+
+/* Stats Card Styling */
+.stats-card {
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    border-radius: 12px;
+    border: none;
+    height: 100%;
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.stats-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.18);
+}
+
+.stats-card .card-body {
+    padding: 24px;
+    background-color: var(--text-light);
+    border-radius: 12px;
+}
+
+.stats-card .card-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--primary-blue);
+    margin-bottom: 18px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--bg-light);
+}
+
+.stat-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 18px;
+    padding: 16px;
+    background-color: var(--bg-light);
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    border-left: 4px solid var(--primary-blue);
+}
+
+.stat-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.12);
+}
+
+.stat-item:last-child {
+    margin-bottom: 0;
+}
+
+.stat-icon {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary-yellow);
+    color: var(--text-dark);
+    border-radius: 50%;
+    margin-right: 18px;
+    font-size: 1.3rem;
+    box-shadow: 0 4px 8px rgba(255, 193, 7, 0.3);
+}
+
+.stat-info {
+    flex: 1;
+}
+
+.stat-info h4 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 4px;
+    color: var(--e-global-color-primary);
+}
+
+.stat-info p {
+    margin-bottom: 0;
+    color: var(--e-global-color-text);
+    font-size: 0.95rem;
+    letter-spacing: 0.02em;
+}
+
+/* Progress Summary Cards */
+.progress-summary-card {
+    transition: all 0.3s ease;
+    border-left: 5px solid var(--e-global-color-secondary);
+    background-color: var(--e-global-color-3266181);
+    padding: 24px !important;
+    border-radius: 12px;
+    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+}
+
+.progress-summary-card:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 12px 20px rgba(0,0,0,0.15);
+}
+
+.progress-summary-card h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: var(--e-global-color-primary);
+}
+
+.progress-summary-card p {
+    font-size: 1rem;
+    color: var(--e-global-color-text);
+    margin-bottom: 0;
+}
+
+/* Chart Container Styling */
+.chart-card {
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    border-radius: 12px;
+    border: none;
+    transition: all 0.3s ease;
+    margin-bottom: 25px;
+    overflow: hidden;
+}
+
+.chart-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.18);
+}
+
+.chart-card .card-body {
+    padding: 24px;
+    background-color: var(--e-global-color-3266181);
+    border-radius: 12px;
+}
+
+.chart-card .card-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--e-global-color-secondary);
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--e-global-color-6f12657);
+}
+
+.chart-container {
+    padding: 10px;
+    margin-top: 15px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 991.98px) {
+    .stats-card, .filter-card {
+        margin-bottom: 25px;
+    }
+    
+    .stat-item {
+        padding: 14px;
+        margin-bottom: 15px;
+    }
+    
+    .stat-icon {
+        width: 45px;
+        height: 45px;
+        font-size: 1.1rem;
+        margin-right: 15px;
+    }
+    
+    .stat-info h4 {
+        font-size: 1.2rem;
+    }
+    
+    .chart-card .card-body,
+    .stats-card .card-body,
+    .filter-card .card-body {
+        padding: 20px;
+    }
+    
+    .progress-summary-card {
+        padding: 15px !important;
+    }
+    
+    .progress-summary-card h2 {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .chart-card .card-body,
+    .stats-card .card-body,
+    .filter-card .card-body {
+        padding: 18px 15px;
+    }
+    
+    .stat-item {
+        padding: 12px;
+        margin-bottom: 12px;
+    }
+    
+    .stat-icon {
+        width: 40px;
+        height: 40px;
+        margin-right: 12px;
+    }
+    
+    .stat-info h4 {
+        font-size: 1.1rem;
+    }
+    
+    .stat-info p {
+        font-size: 0.9rem;
+    }
+    
+    .chart-card .card-title,
+    .stats-card .card-title,
+    .filter-card .card-title {
+        font-size: 1.3rem;
+        margin-bottom: 15px;
+    }
+    
+    .progress-summary-card h2 {
+        font-size: 1.6rem;
+    }
+}

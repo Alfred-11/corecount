@@ -1,0 +1,191 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="900" height="1200" viewBox="0 0 900 1200">
+  <!-- ER Diagram for CoreCount Fitness Planner -->
+  <style>
+    .entity { fill: #f8f9fa; stroke: #2c3e50; stroke-width: 2; }
+    .entity-header { fill: #2c3e50; }
+    .entity-title { fill: white; font-family: Arial; font-size: 14px; font-weight: bold; }
+    .entity-section { fill: none; stroke: #2c3e50; stroke-width: 1; }
+    .entity-text { font-family: Arial; font-size: 12px; fill: #333; }
+    .pk { font-weight: bold; }
+    .fk { font-style: italic; }
+    .relationship { stroke: #2c3e50; stroke-width: 1.5; fill: none; }
+    .cardinality { font-family: Arial; font-size: 12px; fill: #2c3e50; font-weight: bold; }
+  </style>
+  
+  <!-- Users Entity -->
+  <rect x="50" y="50" width="200" height="200" rx="5" ry="5" class="entity" />
+  <rect x="50" y="50" width="200" height="30" rx="5" ry="5" class="entity-header" />
+  <text x="150" y="70" text-anchor="middle" class="entity-title">users</text>
+  <line x1="50" y1="80" x2="250" y2="80" class="entity-section" />
+  <text x="60" y="100" class="entity-text pk">user_id (PK)</text>
+  <text x="60" y="120" class="entity-text">username</text>
+  <text x="60" y="140" class="entity-text">email</text>
+  <text x="60" y="160" class="entity-text">password</text>
+  <text x="60" y="180" class="entity-text">reset_token</text>
+  <text x="60" y="200" class="entity-text">reset_token_expiry</text>
+  <text x="60" y="220" class="entity-text">created_at</text>
+  <text x="60" y="240" class="entity-text">updated_at</text>
+  
+  <!-- User Profiles Entity -->
+  <rect x="50" y="300" width="200" height="200" rx="5" ry="5" class="entity" />
+  <rect x="50" y="300" width="200" height="30" rx="5" ry="5" class="entity-header" />
+  <text x="150" y="320" text-anchor="middle" class="entity-title">user_profiles</text>
+  <line x1="50" y1="330" x2="250" y2="330" class="entity-section" />
+  <text x="60" y="350" class="entity-text pk">profile_id (PK)</text>
+  <text x="60" y="370" class="entity-text fk">user_id (FK)</text>
+  <text x="60" y="390" class="entity-text">first_name</text>
+  <text x="60" y="410" class="entity-text">last_name</text>
+  <text x="60" y="430" class="entity-text">age</text>
+  <text x="60" y="450" class="entity-text">gender</text>
+  <text x="60" y="470" class="entity-text">weight</text>
+  <text x="60" y="490" class="entity-text">height</text>
+  
+  <!-- Workout Categories Entity -->
+  <rect x="350" y="50" width="200" height="120" rx="5" ry="5" class="entity" />
+  <rect x="350" y="50" width="200" height="30" rx="5" ry="5" class="entity-header" />
+  <text x="450" y="70" text-anchor="middle" class="entity-title">workout_categories</text>
+  <line x1="350" y1="80" x2="550" y2="80" class="entity-section" />
+  <text x="360" y="100" class="entity-text pk">category_id (PK)</text>
+  <text x="360" y="120" class="entity-text">name</text>
+  <text x="360" y="140" class="entity-text">description</text>
+  <text x="360" y="160" class="entity-text">image_path</text>
+  
+  <!-- Workouts Entity -->
+  <rect x="350" y="220" width="200" height="200" rx="5" ry="5" class="entity" />
+  <rect x="350" y="220" width="200" height="30" rx="5" ry="5" class="entity-header" />
+  <text x="450" y="240" text-anchor="middle" class="entity-title">workouts</text>
+  <line x1="350" y1="250" x2="550" y2="250" class="entity-section" />
+  <text x="360" y="270" class="entity-text pk">workout_id (PK)</text>
+  <text x="360" y="290" class="entity-text fk">category_id (FK)</text>
+  <text x="360" y="310" class="entity-text">name</text>
+  <text x="360" y="330" class="entity-text">description</text>
+  <text x="360" y="350" class="entity-text">difficulty_level</text>
+  <text x="360" y="370" class="entity-text">duration</text>
+  <text x="360" y="390" class="entity-text">calories_burned</text>
+  <text x="360" y="410" class="entity-text">image_path</text>
+  
+  <!-- Exercises Entity -->
+  <rect x="650" y="50" width="200" height="180" rx="5" ry="5" class="entity" />
+  <rect x="650" y="50" width="200" height="30" rx="5" ry="5" class="entity-header" />
+  <text x="750" y="70" text-anchor="middle" class="entity-title">exercises</text>
+  <line x1="650" y1="80" x2="850" y2="80" class="entity-section" />
+  <text x="660" y="100" class="entity-text pk">exercise_id (PK)</text>
+  <text x="660" y="120" class="entity-text">name</text>
+  <text x="660" y="140" class="entity-text">description</text>
+  <text x="660" y="160" class="entity-text">form_guidance</text>
+  <text x="660" y="180" class="entity-text">tips</text>
+  <text x="660" y="200" class="entity-text">duration</text>
+  <text x="660" y="220" class="entity-text">rest_period</text>
+  
+  <!-- Workout Exercises Entity (Junction) -->
+  <rect x="650" y="280" width="200" height="120" rx="5" ry="5" class="entity" />
+  <rect x="650" y="280" width="200" height="30" rx="5" ry="5" class="entity-header" />
+  <text x="750" y="300" text-anchor="middle" class="entity-title">workout_exercises</text>
+  <line x1="650" y1="310" x2="850" y2="310" class="entity-section" />
+  <text x="660" y="330" class="entity-text pk fk">workout_id (PK, FK)</text>
+  <text x="660" y="350" class="entity-text pk fk">exercise_id (PK, FK)</text>
+  <text x="660" y="370" class="entity-text">exercise_order</text>
+  
+  <!-- User Progress Entity -->
+  <rect x="50" y="550" width="200" height="180" rx="5" ry="5" class="entity" />
+  <rect x="50" y="550" width="200" height="30" rx="5" ry="5" class="entity-header" />
+  <text x="150" y="570" text-anchor="middle" class="entity-title">user_progress</text>
+  <line x1="50" y1="580" x2="250" y2="580" class="entity-section" />
+  <text x="60" y="600" class="entity-text pk">progress_id (PK)</text>
+  <text x="60" y="620" class="entity-text fk">user_id (FK)</text>
+  <text x="60" y="640" class="entity-text fk">workout_id (FK)</text>
+  <text x="60" y="660" class="entity-text">completion_date</text>
+  <text x="60" y="680" class="entity-text">duration</text>
+  <text x="60" y="700" class="entity-text">calories_burned</text>
+  <text x="60" y="720" class="entity-text">notes</text>
+  
+  <!-- Workout Schedules Entity -->
+  <rect x="350" y="470" width="200" height="200" rx="5" ry="5" class="entity" />
+  <rect x="350" y="470" width="200" height="30" rx="5" ry="5" class="entity-header" />
+  <text x="450" y="490" text-anchor="middle" class="entity-title">workout_schedules</text>
+  <line x1="350" y1="500" x2="550" y2="500" class="entity-section" />
+  <text x="360" y="520" class="entity-text pk">schedule_id (PK)</text>
+  <text x="360" y="540" class="entity-text fk">user_id (FK)</text>
+  <text x="360" y="560" class="entity-text fk">workout_id (FK)</text>
+  <text x="360" y="580" class="entity-text">scheduled_date</text>
+  <text x="360" y="600" class="entity-text">scheduled_time</text>
+  <text x="360" y="620" class="entity-text">notification_sent</text>
+  <text x="360" y="640" class="entity-text">completed</text>
+  <text x="360" y="660" class="entity-text">created_at</text>
+  
+  <!-- Contact Messages Entity -->
+  <rect x="650" y="450" width="200" height="180" rx="5" ry="5" class="entity" />
+  <rect x="650" y="450" width="200" height="30" rx="5" ry="5" class="entity-header" />
+  <text x="750" y="470" text-anchor="middle" class="entity-title">contact_messages</text>
+  <line x1="650" y1="480" x2="850" y2="480" class="entity-section" />
+  <text x="660" y="500" class="entity-text pk">message_id (PK)</text>
+  <text x="660" y="520" class="entity-text">name</text>
+  <text x="660" y="540" class="entity-text">email</text>
+  <text x="660" y="560" class="entity-text">subject</text>
+  <text x="660" y="580" class="entity-text">message</text>
+  <text x="660" y="600" class="entity-text">message_type</text>
+  <text x="660" y="620" class="entity-text">submitted_at</text>
+  
+  <!-- Fitness Articles Entity -->
+  <rect x="350" y="720" width="200" height="150" rx="5" ry="5" class="entity" />
+  <rect x="350" y="720" width="200" height="30" rx="5" ry="5" class="entity-header" />
+  <text x="450" y="740" text-anchor="middle" class="entity-title">fitness_articles</text>
+  <line x1="350" y1="750" x2="550" y2="750" class="entity-section" />
+  <text x="360" y="770" class="entity-text pk">article_id (PK)</text>
+  <text x="360" y="790" class="entity-text">title</text>
+  <text x="360" y="810" class="entity-text">content</text>
+  <text x="360" y="830" class="entity-text">author</text>
+  <text x="360" y="850" class="entity-text">image_path</text>
+  <text x="360" y="870" class="entity-text">published_at</text>
+  
+  <!-- Motivational Quotes Entity -->
+  <rect x="650" y="680" width="200" height="120" rx="5" ry="5" class="entity" />
+  <rect x="650" y="680" width="200" height="30" rx="5" ry="5" class="entity-header" />
+  <text x="750" y="700" text-anchor="middle" class="entity-title">motivational_quotes</text>
+  <line x1="650" y1="710" x2="850" y2="710" class="entity-section" />
+  <text x="660" y="730" class="entity-text pk">quote_id (PK)</text>
+  <text x="660" y="750" class="entity-text">quote_text</text>
+  <text x="660" y="770" class="entity-text">author</text>
+  <text x="660" y="790" class="entity-text">created_at</text>
+  
+  <!-- Relationships -->
+  <!-- Users to User Profiles (1:1) -->
+  <line x1="150" y1="250" x2="150" y2="300" class="relationship" />
+  <text x="160" y="275" class="cardinality">1</text>
+  <text x="160" y="295" class="cardinality">1</text>
+  
+  <!-- Users to User Progress (1:N) -->
+  <path d="M 50 150 L 20 150 L 20 650 L 50 650" class="relationship" />
+  <text x="30" y="145" class="cardinality">1</text>
+  <text x="30" y="645" class="cardinality">N</text>
+  
+  <!-- Users to Workout Schedules (1:N) -->
+  <path d="M 250 150 L 300 150 L 300 540 L 350 540" class="relationship" />
+  <text x="260" y="145" class="cardinality">1</text>
+  <text x="340" y="535" class="cardinality">N</text>
+  
+  <!-- Workout Categories to Workouts (1:N) -->
+  <line x1="450" y1="170" x2="450" y2="220" class="relationship" />
+  <text x="460" y="190" class="cardinality">1</text>
+  <text x="460" y="215" class="cardinality">N</text>
+  
+  <!-- Workouts to Workout Exercises (1:N) -->
+  <path d="M 550 320 L 600 320 L 600 340 L 650 340" class="relationship" />
+  <text x="560" y="315" class="cardinality">1</text>
+  <text x="640" y="335" class="cardinality">N</text>
+  
+  <!-- Exercises to Workout Exercises (1:N) -->
+  <path d="M 750 230 L 750 280" class="relationship" />
+  <text x="760" y="250" class="cardinality">1</text>
+  <text x="760" y="275" class="cardinality">N</text>
+  
+  <!-- Workouts to User Progress (1:N) -->
+  <path d="M 350 320 L 300 320 L 300 640 L 250 640" class="relationship" />
+  <text x="340" y="315" class="cardinality">1</text>
+  <text x="260" y="635" class="cardinality">N</text>
+  
+  <!-- Workouts to Workout Schedules (1:N) -->
+  <path d="M 450 420 L 450 470" class="relationship" />
+  <text x="460" y="440" class="cardinality">1</text>
+  <text x="460" y="465" class="cardinality">N</text>
+</svg>

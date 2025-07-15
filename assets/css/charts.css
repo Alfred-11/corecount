@@ -1,0 +1,39 @@
+/**
+ * Chart Styles for CoreCount Fitness Planner
+ */
+
+/* Fixed height containers for charts */
+.chart-container {
+    position: relative;
+    height: 300px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+/* Ensure cards containing charts have fixed heights */
+.card.h-100 .card-body {
+    display: flex;
+    flex-direction: column;
+}
+
+.card.h-100 .card-body h5.card-title {
+    margin-bottom: 15px;
+}
+
+.card.h-100 .card-body canvas {
+    flex: 1;
+    max-height: 300px;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+/* Ensure alert messages don't cause layout shifts */
+.card.h-100 .card-body .alert {
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    border-color: var(--primary-blue);
+}

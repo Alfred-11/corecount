@@ -1,0 +1,111 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="800" height="800" viewBox="0 0 800 800">
+  <!-- Use Case Diagram for CoreCount Fitness Planner -->
+  <style>
+    .actor { fill: #f8f9fa; stroke: #2c3e50; stroke-width: 2; }
+    .actor-text { font-family: Arial; font-size: 14px; fill: #2c3e50; font-weight: bold; }
+    .use-case { fill: #f8f9fa; stroke: #2c3e50; stroke-width: 2; }
+    .use-case-text { font-family: Arial; font-size: 12px; fill: #2c3e50; }
+    .system-boundary { fill: none; stroke: #6c757d; stroke-width: 2; stroke-dasharray: 5,5; }
+    .system-name { font-family: Arial; font-size: 16px; fill: #2c3e50; font-weight: bold; }
+    .relationship { stroke: #2c3e50; stroke-width: 1.5; fill: none; }
+    .arrow-head { fill: #2c3e50; }
+    .relationship-text { font-family: Arial; font-size: 10px; fill: #6c757d; }
+  </style>
+  
+  <!-- System Boundary -->
+  <rect x="150" y="50" width="500" height="700" rx="10" ry="10" class="system-boundary" />
+  <text x="400" y="80" text-anchor="middle" class="system-name">CoreCount Fitness Planner</text>
+  
+  <!-- Actors -->
+  <!-- Unregistered User -->
+  <circle cx="75" cy="150" r="20" class="actor" />
+  <line x1="75" y1="170" x2="75" y2="220" stroke="#2c3e50" stroke-width="2" />
+  <line x1="50" y1="190" x2="100" y2="190" stroke="#2c3e50" stroke-width="2" />
+  <line x1="75" y1="220" x2="50" y2="250" stroke="#2c3e50" stroke-width="2" />
+  <line x1="75" y1="220" x2="100" y2="250" stroke="#2c3e50" stroke-width="2" />
+  <text x="75" y="280" text-anchor="middle" class="actor-text">Unregistered User</text>
+  
+  <!-- Registered User -->
+  <circle cx="75" cy="450" r="20" class="actor" />
+  <line x1="75" y1="470" x2="75" y2="520" stroke="#2c3e50" stroke-width="2" />
+  <line x1="50" y1="490" x2="100" y2="490" stroke="#2c3e50" stroke-width="2" />
+  <line x1="75" y1="520" x2="50" y2="550" stroke="#2c3e50" stroke-width="2" />
+  <line x1="75" y1="520" x2="100" y2="550" stroke="#2c3e50" stroke-width="2" />
+  <text x="75" y="580" text-anchor="middle" class="actor-text">Registered User</text>
+  
+  <!-- Use Cases -->
+  <!-- Authentication Use Cases -->
+  <ellipse cx="250" cy="120" rx="80" ry="30" class="use-case" />
+  <text x="250" y="125" text-anchor="middle" class="use-case-text">Register Account</text>
+  
+  <ellipse cx="250" cy="190" rx="80" ry="30" class="use-case" />
+  <text x="250" y="195" text-anchor="middle" class="use-case-text">Login</text>
+  
+  <ellipse cx="250" cy="260" rx="80" ry="30" class="use-case" />
+  <text x="250" y="265" text-anchor="middle" class="use-case-text">Reset Password</text>
+  
+  <ellipse cx="250" cy="330" rx="80" ry="30" class="use-case" />
+  <text x="250" y="335" text-anchor="middle" class="use-case-text">Contact Support</text>
+  
+  <!-- Workout Management Use Cases -->
+  <ellipse cx="400" cy="400" rx="80" ry="30" class="use-case" />
+  <text x="400" y="405" text-anchor="middle" class="use-case-text">Browse Workouts</text>
+  
+  <ellipse cx="400" cy="470" rx="80" ry="30" class="use-case" />
+  <text x="400" y="475" text-anchor="middle" class="use-case-text">View Workout Details</text>
+  
+  <ellipse cx="400" cy="540" rx="80" ry="30" class="use-case" />
+  <text x="400" y="545" text-anchor="middle" class="use-case-text">Schedule Workout</text>
+  
+  <ellipse cx="400" cy="610" rx="80" ry="30" class="use-case" />
+  <text x="400" y="615" text-anchor="middle" class="use-case-text">Complete Workout</text>
+  
+  <!-- User Profile Use Cases -->
+  <ellipse cx="550" cy="400" rx="80" ry="30" class="use-case" />
+  <text x="550" y="405" text-anchor="middle" class="use-case-text">Manage Profile</text>
+  
+  <ellipse cx="550" cy="470" rx="80" ry="30" class="use-case" />
+  <text x="550" y="475" text-anchor="middle" class="use-case-text">Track Progress</text>
+  
+  <ellipse cx="550" cy="540" rx="80" ry="30" class="use-case" />
+  <text x="550" y="545" text-anchor="middle" class="use-case-text">View Statistics</text>
+  
+  <ellipse cx="550" cy="610" rx="80" ry="30" class="use-case" />
+  <text x="550" y="615" text-anchor="middle" class="use-case-text">Change Password</text>
+  
+  <!-- Timer Use Case -->
+  <ellipse cx="400" cy="680" rx="80" ry="30" class="use-case" />
+  <text x="400" y="685" text-anchor="middle" class="use-case-text">Use Workout Timer</text>
+  
+  <!-- Relationships -->
+  <!-- Unregistered User Relationships -->
+  <line x1="95" y1="150" x2="170" y2="120" class="relationship" />
+  <line x1="95" y1="170" x2="170" y2="190" class="relationship" />
+  <line x1="95" y1="190" x2="170" y2="260" class="relationship" />
+  <line x1="95" y1="210" x2="170" y2="330" class="relationship" />
+  
+  <!-- Registered User Relationships -->
+  <line x1="95" y1="450" x2="320" y2="400" class="relationship" />
+  <line x1="95" y1="460" x2="320" y2="470" class="relationship" />
+  <line x1="95" y1="470" x2="320" y2="540" class="relationship" />
+  <line x1="95" y1="480" x2="320" y2="610" class="relationship" />
+  <line x1="95" y1="490" x2="320" y2="680" class="relationship" />
+  
+  <line x1="95" y1="450" x2="470" y2="400" class="relationship" />
+  <line x1="95" y1="460" x2="470" y2="470" class="relationship" />
+  <line x1="95" y1="470" x2="470" y2="540" class="relationship" />
+  <line x1="95" y1="480" x2="470" y2="610" class="relationship" />
+  
+  <!-- Include Relationships -->
+  <line x1="400" y1="640" x2="400" y2="650" class="relationship" />
+  <polygon points="400,680 395,665 405,665" class="arrow-head" />
+  <text x="420" y="660" class="relationship-text">«include»</text>
+  
+  <line x1="480" y1="470" x2="520" y2="470" class="relationship" />
+  <text x="500" y="460" class="relationship-text">«include»</text>
+  
+  <!-- Extend Relationships -->
+  <line x1="480" y1="540" x2="520" y2="540" class="relationship" stroke-dasharray="5,5" />
+  <polygon points="520,540 510,535 510,545" class="arrow-head" />
+  <text x="500" y="530" class="relationship-text">«extend»</text>
+</svg>

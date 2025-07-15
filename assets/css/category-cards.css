@@ -1,0 +1,237 @@
+/**
+ * Category Cards Enhancement Styles
+ * CoreCount Fitness Planner
+ */
+
+/* Enhanced Chart Card Styling */
+.chart-card {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    border: none;
+    transition: all 0.3s ease;
+    margin-bottom: 25px;
+    overflow: hidden;
+}
+
+.chart-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+.chart-card .card-body {
+    padding: 25px;
+    background-color: var(--text-light);
+    border-radius: 12px;
+}
+
+.chart-card .card-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--primary-blue);
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--bg-light);
+}
+
+/* Category Breakdown Table Styling */
+.table-responsive {
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.chart-card .table {
+    margin-bottom: 0;
+}
+
+.chart-card .table thead th {
+    background-color: var(--bg-light);
+    color: var(--primary-blue-dark);
+    font-weight: 600;
+    border-top: none;
+    padding: 15px;
+}
+
+.chart-card .table tbody td {
+    padding: 15px;
+    vertical-align: middle;
+    border-color: var(--bg-light);
+}
+
+.chart-card .table tbody tr:hover {
+    background-color: var(--bg-light);
+}
+
+/* Category Name Styling */
+.chart-card .table tbody td:first-child {
+    font-weight: 600;
+    color: var(--primary-blue);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 767.98px) {
+    .chart-card .card-body {
+        padding: 20px 15px;
+    }
+    
+    .chart-card .table thead th,
+    .chart-card .table tbody td {
+        padding: 12px 10px;
+    }
+}
+
+/* Progress Summary Cards Enhancement */
+.progress-summary-card {
+    background-color: var(--text-light);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    border-left: 5px solid var(--primary-blue);
+    transition: all 0.3s ease;
+    padding: 24px !important;
+    border-radius: 12px;
+}
+
+.progress-summary-card:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+}
+
+.progress-summary-card h2 {
+    color: var(--primary-blue-dark);
+    font-weight: 700;
+}
+
+.progress-summary-card p {
+    color: var(--e-global-color-text);
+    font-size: 0.95rem;
+    margin-top: 5px;
+}
+
+/* Category-specific color accents */
+.chart-card .table tbody tr:nth-child(1) td:first-child {
+    border-left: 4px solid var(--e-global-color-secondary);
+    padding-left: 12px;
+}
+
+.chart-card .table tbody tr:nth-child(2) td:first-child {
+    border-left: 4px solid var(--success-color);
+    padding-left: 12px;
+}
+
+.chart-card .table tbody tr:nth-child(3) td:first-child {
+    border-left: 4px solid var(--danger-color);
+    padding-left: 12px;
+}
+
+.chart-card .table tbody tr:nth-child(4) td:first-child {
+    border-left: 4px solid var(--e-global-color-accent);
+    padding-left: 12px;
+}
+
+.chart-card .table tbody tr:nth-child(5) td:first-child {
+    border-left: 4px solid var(--e-global-color-primary);
+    padding-left: 12px;
+}
+
+/* Category Cards Enhancement Styles */
+/* ... existing code ... */
+
+/* Workout Card Enhancement to match Category Cards */
+.workout-card {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    height: 250px;
+    background-color: var(--e-global-color-3266181);
+    transition: transform 0.3s ease;
+}
+
+.workout-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.workout-image {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.workout-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.workout-card:hover .workout-image img {
+    transform: scale(1.1);
+}
+
+.workout-details {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(10, 23, 45, 0.8));
+    padding: 20px;
+    color: var(--e-global-color-3266181);
+    transition: all 0.3s ease;
+}
+
+.workout-card:hover .workout-details {
+    background: linear-gradient(transparent, rgba(10, 23, 45, 0.9));
+}
+
+.workout-details h3 {
+    font-size: 1.3rem;
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: var(--e-global-color-3266181);
+}
+
+.workout-meta {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+    color: var(--e-global-color-9d44d9d);
+}
+
+.workout-meta span i {
+    margin-right: 5px;
+}
+
+.workout-description {
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+    opacity: 0.9;
+    color: var(--e-global-color-3266181);
+}
+
+/* Category label styling */
+.category-label {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    z-index: 2;
+}
+
+.beginner {
+    background-color: #28a745;
+    color: white;
+}
+
+.intermediate {
+    background-color: #ffc107;
+    color: #212529;
+}
+
+.advanced {
+    background-color: #dc3545;
+    color: white;
+}

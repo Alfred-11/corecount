@@ -1,0 +1,160 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="800" height="1000" viewBox="0 0 800 1000">
+  <!-- Class Diagram for CoreCount Fitness Planner -->
+  <style>
+    .class-box { fill: #f8f9fa; stroke: #2c3e50; stroke-width: 2; }
+    .class-header { fill: #2c3e50; }
+    .class-title { fill: white; font-family: Arial; font-size: 14px; font-weight: bold; }
+    .class-section { fill: none; stroke: #2c3e50; stroke-width: 1; }
+    .class-text { font-family: Arial; font-size: 12px; fill: #333; }
+    .relationship { stroke: #2c3e50; stroke-width: 1.5; fill: none; }
+    .arrow-head { fill: #2c3e50; }
+    .cardinality { font-family: Arial; font-size: 12px; fill: #2c3e50; }
+  </style>
+  
+  <!-- User Class -->
+  <rect x="50" y="50" width="200" height="150" rx="5" ry="5" class="class-box" />
+  <rect x="50" y="50" width="200" height="30" rx="5" ry="5" class="class-header" />
+  <text x="150" y="70" text-anchor="middle" class="class-title">User</text>
+  <line x1="50" y1="80" x2="250" y2="80" class="class-section" />
+  <text x="60" y="100" class="class-text">+ user_id: int</text>
+  <text x="60" y="120" class="class-text">+ username: string</text>
+  <text x="60" y="140" class="class-text">+ email: string</text>
+  <text x="60" y="160" class="class-text">+ password: string</text>
+  <text x="60" y="180" class="class-text">+ created_at: timestamp</text>
+  
+  <!-- UserProfile Class -->
+  <rect x="50" y="250" width="200" height="170" rx="5" ry="5" class="class-box" />
+  <rect x="50" y="250" width="200" height="30" rx="5" ry="5" class="class-header" />
+  <text x="150" y="270" text-anchor="middle" class="class-title">UserProfile</text>
+  <line x1="50" y1="280" x2="250" y2="280" class="class-section" />
+  <text x="60" y="300" class="class-text">+ profile_id: int</text>
+  <text x="60" y="320" class="class-text">+ user_id: int</text>
+  <text x="60" y="340" class="class-text">+ first_name: string</text>
+  <text x="60" y="360" class="class-text">+ last_name: string</text>
+  <text x="60" y="380" class="class-text">+ age: int</text>
+  <text x="60" y="400" class="class-text">+ gender: enum</text>
+  <text x="60" y="420" class="class-text">+ weight: decimal</text>
+  
+  <!-- Workout Class -->
+  <rect x="350" y="50" width="200" height="170" rx="5" ry="5" class="class-box" />
+  <rect x="350" y="50" width="200" height="30" rx="5" ry="5" class="class-header" />
+  <text x="450" y="70" text-anchor="middle" class="class-title">Workout</text>
+  <line x1="350" y1="80" x2="550" y2="80" class="class-section" />
+  <text x="360" y="100" class="class-text">+ workout_id: int</text>
+  <text x="360" y="120" class="class-text">+ category_id: int</text>
+  <text x="360" y="140" class="class-text">+ name: string</text>
+  <text x="360" y="160" class="class-text">+ description: text</text>
+  <text x="360" y="180" class="class-text">+ difficulty_level: enum</text>
+  <text x="360" y="200" class="class-text">+ duration: int</text>
+  <text x="360" y="220" class="class-text">+ calories_burned: int</text>
+  
+  <!-- WorkoutCategory Class -->
+  <rect x="650" y="50" width="200" height="120" rx="5" ry="5" class="class-box" />
+  <rect x="650" y="50" width="200" height="30" rx="5" ry="5" class="class-header" />
+  <text x="750" y="70" text-anchor="middle" class="class-title">WorkoutCategory</text>
+  <line x1="650" y1="80" x2="850" y2="80" class="class-section" />
+  <text x="660" y="100" class="class-text">+ category_id: int</text>
+  <text x="660" y="120" class="class-text">+ name: string</text>
+  <text x="660" y="140" class="class-text">+ description: text</text>
+  <text x="660" y="160" class="class-text">+ image_path: string</text>
+  
+  <!-- Exercise Class -->
+  <rect x="350" y="250" width="200" height="170" rx="5" ry="5" class="class-box" />
+  <rect x="350" y="250" width="200" height="30" rx="5" ry="5" class="class-header" />
+  <text x="450" y="270" text-anchor="middle" class="class-title">Exercise</text>
+  <line x1="350" y1="280" x2="550" y2="280" class="class-section" />
+  <text x="360" y="300" class="class-text">+ exercise_id: int</text>
+  <text x="360" y="320" class="class-text">+ name: string</text>
+  <text x="360" y="340" class="class-text">+ description: text</text>
+  <text x="360" y="360" class="class-text">+ form_guidance: text</text>
+  <text x="360" y="380" class="class-text">+ tips: text</text>
+  <text x="360" y="400" class="class-text">+ duration: int</text>
+  <text x="360" y="420" class="class-text">+ rest_period: int</text>
+  
+  <!-- WorkoutExercise Class (Junction) -->
+  <rect x="350" y="450" width="200" height="120" rx="5" ry="5" class="class-box" />
+  <rect x="350" y="450" width="200" height="30" rx="5" ry="5" class="class-header" />
+  <text x="450" y="470" text-anchor="middle" class="class-title">WorkoutExercise</text>
+  <line x1="350" y1="480" x2="550" y2="480" class="class-section" />
+  <text x="360" y="500" class="class-text">+ workout_id: int</text>
+  <text x="360" y="520" class="class-text">+ exercise_id: int</text>
+  <text x="360" y="540" class="class-text">+ exercise_order: int</text>
+  
+  <!-- UserProgress Class -->
+  <rect x="50" y="450" width="200" height="150" rx="5" ry="5" class="class-box" />
+  <rect x="50" y="450" width="200" height="30" rx="5" ry="5" class="class-header" />
+  <text x="150" y="470" text-anchor="middle" class="class-title">UserProgress</text>
+  <line x1="50" y1="480" x2="250" y2="480" class="class-section" />
+  <text x="60" y="500" class="class-text">+ progress_id: int</text>
+  <text x="60" y="520" class="class-text">+ user_id: int</text>
+  <text x="60" y="540" class="class-text">+ workout_id: int</text>
+  <text x="60" y="560" class="class-text">+ completion_date: datetime</text>
+  <text x="60" y="580" class="class-text">+ duration: int</text>
+  <text x="60" y="600" class="class-text">+ calories_burned: int</text>
+  
+  <!-- WorkoutSchedule Class -->
+  <rect x="50" y="650" width="200" height="170" rx="5" ry="5" class="class-box" />
+  <rect x="50" y="650" width="200" height="30" rx="5" ry="5" class="class-header" />
+  <text x="150" y="670" text-anchor="middle" class="class-title">WorkoutSchedule</text>
+  <line x1="50" y1="680" x2="250" y2="680" class="class-section" />
+  <text x="60" y="700" class="class-text">+ schedule_id: int</text>
+  <text x="60" y="720" class="class-text">+ user_id: int</text>
+  <text x="60" y="740" class="class-text">+ workout_id: int</text>
+  <text x="60" y="760" class="class-text">+ scheduled_date: date</text>
+  <text x="60" y="780" class="class-text">+ scheduled_time: time</text>
+  <text x="60" y="800" class="class-text">+ notification_sent: boolean</text>
+  <text x="60" y="820" class="class-text">+ completed: boolean</text>
+  
+  <!-- ContactMessage Class -->
+  <rect x="350" y="650" width="200" height="150" rx="5" ry="5" class="class-box" />
+  <rect x="350" y="650" width="200" height="30" rx="5" ry="5" class="class-header" />
+  <text x="450" y="670" text-anchor="middle" class="class-title">ContactMessage</text>
+  <line x1="350" y1="680" x2="550" y2="680" class="class-section" />
+  <text x="360" y="700" class="class-text">+ message_id: int</text>
+  <text x="360" y="720" class="class-text">+ name: string</text>
+  <text x="360" y="740" class="class-text">+ email: string</text>
+  <text x="360" y="760" class="class-text">+ subject: string</text>
+  <text x="360" y="780" class="class-text">+ message: text</text>
+  <text x="360" y="800" class="class-text">+ submitted_at: timestamp</text>
+  
+  <!-- Relationships -->
+  <!-- User to UserProfile (1:1) -->
+  <line x1="150" y1="200" x2="150" y2="250" class="relationship" />
+  <text x="160" y="225" class="cardinality">1</text>
+  <text x="160" y="245" class="cardinality">1</text>
+  
+  <!-- User to UserProgress (1:N) -->
+  <path d="M 150 200 L 150 230 L 30 230 L 30 450 L 50 450" class="relationship" />
+  <text x="160" y="225" class="cardinality">1</text>
+  <text x="40" y="445" class="cardinality">N</text>
+  
+  <!-- User to WorkoutSchedule (1:N) -->
+  <path d="M 150 200 L 150 230 L 20 230 L 20 670 L 50 670" class="relationship" />
+  <text x="160" y="225" class="cardinality">1</text>
+  <text x="40" y="665" class="cardinality">N</text>
+  
+  <!-- Workout to WorkoutCategory (N:1) -->
+  <line x1="550" y1="110" x2="650" y2="110" class="relationship" />
+  <text x="560" y="105" class="cardinality">N</text>
+  <text x="640" y="105" class="cardinality">1</text>
+  
+  <!-- Workout to WorkoutExercise (1:N) -->
+  <path d="M 450 220 L 450 450" class="relationship" />
+  <text x="460" y="240" class="cardinality">1</text>
+  <text x="460" y="445" class="cardinality">N</text>
+  
+  <!-- Exercise to WorkoutExercise (1:N) -->
+  <path d="M 450 420 L 450 450" class="relationship" />
+  <text x="440" y="435" class="cardinality">1</text>
+  <text x="440" y="445" class="cardinality">N</text>
+  
+  <!-- Workout to UserProgress (1:N) -->
+  <path d="M 350 150 L 280 150 L 280 525 L 250 525" class="relationship" />
+  <text x="340" y="145" class="cardinality">1</text>
+  <text x="260" y="520" class="cardinality">N</text>
+  
+  <!-- Workout to WorkoutSchedule (1:N) -->
+  <path d="M 350 150 L 270 150 L 270 730 L 250 730" class="relationship" />
+  <text x="340" y="145" class="cardinality">1</text>
+  <text x="260" y="725" class="cardinality">N</text>
+</svg>

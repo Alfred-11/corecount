@@ -1,0 +1,151 @@
+/**
+ * Schedule Page Style Updates
+ * CoreCount Fitness Planner
+ */
+
+/* Standardize action button sizes */
+.workout-actions .btn {
+    width: 36px;
+    height: 36px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 2px;
+    padding: 0;
+}
+
+/* Available Workouts Section Redesign */
+.card-header.bg-primary {
+    background-color: var(--primary-blue) !important;
+    border-bottom: none;
+    padding: 18px 22px;
+    border-radius: 8px 8px 0 0;
+}
+
+.card-header.bg-primary h5.card-title {
+    font-size: 1.4rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    color: var(--text-light);
+}
+
+/* Workout List Container */
+.workout-list {
+    max-height: 650px; /* Increased height to better match calendar */
+    overflow-y: auto;
+    padding: 18px;
+    margin-top: 15px;
+    border: 1px solid #E9E9E9;
+    border-radius: 6px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    scrollbar-width: thin;
+    scrollbar-color: var(--primary-blue) var(--bg-light);
+    position: relative; /* Added for better positioning */
+    flex: 1; /* Take up available space */
+}
+
+/* Available Workouts Card */
+.col-lg-4 .card {
+    box-shadow: 0 6px 16px rgba(0,0,0,0.18);
+    border-radius: 8px;
+    border: none;
+    margin-top: 0; /* Removed top margin to align with calendar */
+    width: 100%;
+    min-height: 700px; /* Set minimum height to match calendar */
+    display: flex;
+    flex-direction: column;
+    position: sticky;
+    top: 20px; /* Adds some space at the top */
+    overflow-y: hidden; /* Prevent vertical overflow */
+}
+
+/* Draggable Workout Items */
+.draggable-workout {
+    cursor: grab;
+    transition: all 0.2s ease;
+    margin-bottom: 14px;
+    border-left: 5px solid var(--primary-blue);
+    display: block;
+    padding: 16px;
+    background-color: var(--text-light);
+    border-radius: 6px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+    font-size: 1.1rem;
+    width: 100%;
+}
+
+.draggable-workout:hover {
+    background-color: var(--bg-light);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    border-left: 5px solid var(--primary-yellow);
+}
+
+/* Workout list scrollbar customization */
+.workout-list::-webkit-scrollbar {
+    width: 8px;
+}
+
+.workout-list::-webkit-scrollbar-track {
+    background: var(--bg-light);
+    border-radius: 4px;
+}
+
+.workout-list::-webkit-scrollbar-thumb {
+    background: var(--primary-blue);
+    border-radius: 4px;
+}
+
+.workout-list::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-blue-dark);
+}
+
+/* Card body styling */
+.col-lg-4 .card-body {
+    padding: 20px;
+    background-color: var(--text-light);
+    border-radius: 0 0 8px 8px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow-y: hidden; /* Prevent vertical overflow */
+    position: relative; /* For proper positioning of child elements */
+}
+
+/* Card text styling */
+.col-lg-4 .card-body .card-text {
+    margin-bottom: 15px;
+}
+
+/* Fix for draggable items */
+.draggable-workout.dragging {
+    opacity: 0.5;
+}
+
+/* Calendar day hover effect when dragging */
+.calendar-day.dragover {
+    background-color: rgba(26, 115, 232, 0.1);
+    box-shadow: inset 0 0 0 2px var(--primary-blue);
+}
+
+/* Responsive adjustments */
+@media (max-width: 991.98px) {
+    .col-lg-4 .card {
+        margin-bottom: 20px;
+        height: auto;
+        position: static;
+    }
+    
+    .workout-list {
+        max-height: 400px;
+    }
+    
+    .col-lg-4 .card-body {
+        padding: 15px;
+    }
+    
+    .draggable-workout {
+        margin-bottom: 10px;
+        padding: 12px;
+    }
+}

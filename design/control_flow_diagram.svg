@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1000" height="1200" viewBox="0 0 1000 1200">
+  <title>Control Flow Diagram - CoreCount Fitness Planner</title>
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#333" />
+    </marker>
+  </defs>
+  
+  <!-- Styles -->
+  <style type="text/css">
+    .process { fill: #4e73df; stroke: #2e59d9; stroke-width: 2; }
+    .decision { fill: #f6c23e; stroke: #dda20a; stroke-width: 2; }
+    .terminal { fill: #1cc88a; stroke: #169b6b; stroke-width: 2; }
+    .connector { fill: #e74a3b; stroke: #be2617; stroke-width: 2; }
+    .flow-line { stroke: #333; stroke-width: 2; marker-end: url(#arrowhead); }
+    .text { font-family: Arial, sans-serif; font-size: 14px; fill: #000; }
+    .text-white { font-family: Arial, sans-serif; font-size: 14px; fill: #fff; }
+    .text-bold { font-family: Arial, sans-serif; font-size: 16px; font-weight: bold; fill: #000; }
+    .section-title { font-family: Arial, sans-serif; font-size: 20px; font-weight: bold; fill: #333; }
+  </style>
+  
+  <!-- Background -->
+  <rect width="1000" height="1200" fill="#f8f9fc" />
+  
+  <!-- Title -->
+  <text x="500" y="40" text-anchor="middle" class="section-title" style="font-size: 24px;">Control Flow Diagram - CoreCount Fitness Planner</text>
+  
+  <!-- User Authentication Flow -->
+  <text x="250" y="80" text-anchor="middle" class="section-title">User Authentication Flow</text>
+  
+  <!-- Start -->
+  <rect x="200" y="100" width="100" height="50" rx="25" ry="25" class="terminal" />
+  <text x="250" y="130" text-anchor="middle" class="text-white">Start</text>
+  
+  <!-- Login Page -->
+  <rect x="200" y="180" width="100" height="50" class="process" />
+  <text x="250" y="210" text-anchor="middle" class="text-white">Login Page</text>
+  
+  <!-- Check if Logged In -->
+  <polygon points="250,260 300,290 250,320 200,290" class="decision" />
+  <text x="250" y="295" text-anchor="middle" class="text">Already Logged In?</text>
+  
+  <!-- Redirect to Home -->
+  <rect x="350" y="265" width="120" height="50" class="process" />
+  <text x="410" y="295" text-anchor="middle" class="text-white">Redirect to Home</text>
+  
+  <!-- Enter Credentials -->
+  <rect x="200" y="350" width="100" height="50" class="process" />
+  <text x="250" y="380" text-anchor="middle" class="text-white">Enter Credentials</text>
+  
+  <!-- Validate Credentials -->
+  <polygon points="250,430 300,460 250,490 200,460" class="decision" />
+  <text x="250" y="465" text-anchor="middle" class="text">Valid Credentials?</text>
+  
+  <!-- Show Error -->
+  <rect x="350" y="435" width="120" height="50" class="process" />
+  <text x="410" y="465" text-anchor="middle" class="text-white">Show Error</text>
+  
+  <!-- Create Session -->
+  <rect x="200" y="520" width="100" height="50" class="process" />
+  <text x="250" y="550" text-anchor="middle" class="text-white">Create Session</text>
+  
+  <!-- Redirect to Home -->
+  <rect x="200" y="600" width="100" height="50" class="process" />
+  <text x="250" y="630" text-anchor="middle" class="text-white">Redirect to Home</text>
+  
+  <!-- End -->
+  <rect x="200" y="680" width="100" height="50" rx="25" ry="25" class="terminal" />
+  <text x="250" y="710" text-anchor="middle" class="text-white">End</text>
+  
+  <!-- Flow Lines for Authentication -->
+  <line x1="250" y1="150" x2="250" y2="180" class="flow-line" />
+  <line x1="250" y1="230" x2="250" y2="260" class="flow-line" />
+  <line x1="300" y1="290" x2="350" y2="290" class="flow-line" />
+  <line x1="250" y1="320" x2="250" y2="350" class="flow-line" />
+  <line x1="250" y1="400" x2="250" y2="430" class="flow-line" />
+  <line x1="300" y1="460" x2="350" y2="460" class="flow-line" />
+  <line x1="410" y1="485" x2="410" y2="520" class="flow-line" />
+  <line x1="410" y1="520" x2="250" y2="520" class="flow-line" />
+  <line x1="250" y1="490" x2="250" y2="520" class="flow-line" />
+  <line x1="250" y1="570" x2="250" y2="600" class="flow-line" />
+  <line x1="250" y1="650" x2="250" y2="680" class="flow-line" />
+  <text x="320" y="280" class="text">Yes</text>
+  <text x="240" y="340" class="text">No</text>
+  <text x="320" y="450" class="text">No</text>
+  <text x="240" y="510" class="text">Yes</text>
+  
+  <!-- Workout Scheduling Flow -->
+  <text x="700" y="80" text-anchor="middle" class="section-title">Workout Scheduling Flow</text>
+  
+  <!-- Start -->
+  <rect x="650" y="100" width="100" height="50" rx="25" ry="25" class="terminal" />
+  <text x="700" y="130" text-anchor="middle" class="text-white">Start</text>
+  
+  <!-- Check Login -->
+  <polygon points="700,180 750,210 700,240 650,210" class="decision" />
+  <text x="700" y="215" text-anchor="middle" class="text">Logged In?</text>
+  
+  <!-- Redirect to Login -->
+  <rect x="800" y="185" width="120" height="50" class="process" />
+  <text x="860" y="215" text-anchor="middle" class="text-white">Redirect to Login</text>
+  
+  <!-- Schedule Page -->
+  <rect x="650" y="270" width="100" height="50" class="process" />
+  <text x="700" y="300" text-anchor="middle" class="text-white">Schedule Page</text>
+  
+  <!-- Select Action -->
+  <polygon points="700,350 750,380 700,410 650,380" class="decision" />
+  <text x="700" y="385" text-anchor="middle" class="text">Action?</text>
+  
+  <!-- Add Workout -->
+  <rect x="550" y="410" width="100" height="50" class="process" />
+  <text x="600" y="440" text-anchor="middle" class="text-white">Add Workout</text>
+  
+  <!-- Complete Workout -->
+  <rect x="750" y="410" width="100" height="50" class="process" />
+  <text x="800" y="440" text-anchor="middle" class="text-white">Complete Workout</text>
+  
+  <!-- Select Workout -->
+  <rect x="550" y="490" width="100" height="50" class="process" />
+  <text x="600" y="520" text-anchor="middle" class="text-white">Select Workout</text>
+  
+  <!-- Update Progress -->
+  <rect x="750" y="490" width="100" height="50" class="process" />
+  <text x="800" y="520" text-anchor="middle" class="text-white">Update Progress</text>
+  
+  <!-- Choose Date/Time -->
+  <rect x="550" y="570" width="100" height="50" class="process" />
+  <text x="600" y="600" text-anchor="middle" class="text-white">Choose Date/Time</text>
+  
+  <!-- Save Schedule -->
+  <rect x="550" y="650" width="100" height="50" class="process" />
+  <text x="600" y="680" text-anchor="middle" class="text-white">Save Schedule</text>
+  
+  <!-- End -->
+  <rect x="650" y="730" width="100" height="50" rx="25" ry="25" class="terminal" />
+  <text x="700" y="760" text-anchor="middle" class="text-white">End</text>
+  
+  <!-- Flow Lines for Scheduling -->
+  <line x1="700" y1="150" x2="700" y2="180" class="flow-line" />
+  <line x1="750" y1="210" x2="800" y2="210" class="flow-line" />
+  <line x1="700" y1="240" x2="700" y2="270" class="flow-line" />
+  <line x1="700" y1="320" x2="700" y2="350" class="flow-line" />
+  <line x1="650" y1="380" x2="600" y2="410" class="flow-line" />
+  <line x1="750" y1="380" x2="800" y2="410" class="flow-line" />
+  <line x1="600" y1="460" x2="600" y2="490" class="flow-line" />
+  <line x1="800" y1="460" x2="800" y2="490" class="flow-line" />
+  <line x1="600" y1="540" x2="600" y2="570" class="flow-line" />
+  <line x1="600" y1="620" x2="600" y2="650" class="flow-line" />
+  <line x1="600" y1="700" x2="600" y2="755" class="flow-line" />
+  <line x1="600" y1="755" x2="650" y2="755" class="flow-line" />
+  <line x1="800" y1="540" x2="800" y2="755" class="flow-line" />
+  <line x1="800" y1="755" x2="750" y2="755" class="flow-line" />
+  <text x="770" y="200" class="text">No</text>
+  <text x="690" y="260" class="text">Yes</text>
+  <text x="620" y="370" class="text">Add</text>
+  <text x="770" y="370" class="text">Complete</text>
+  
+  <!-- Progress Tracking Flow -->
+  <text x="500" y="800" text-anchor="middle" class="section-title">Progress Tracking Flow</text>
+  
+  <!-- Start -->
+  <rect x="450" y="830" width="100" height="50" rx="25" ry="25" class="terminal" />
+  <text x="500" y="860" text-anchor="middle" class="text-white">Start</text>
+  
+  <!-- Check Login -->
+  <polygon points="500,910 550,940 500,970 450,940" class="decision" />
+  <text x="500" y="945" text-anchor="middle" class="text">Logged In?</text>
+  
+  <!-- Redirect to Login -->
+  <rect x="600" y="915" width="120" height="50" class="process" />
+  <text x="660" y="945" text-anchor="middle" class="text-white">Redirect to Login</text>
+  
+  <!-- Progress Page -->
+  <rect x="450" y="1000" width="100" height="50" class="process" />
+  <text x="500" y="1030" text-anchor="middle" class="text-white">Progress Page</text>
+  
+  <!-- Select Filter -->
+  <rect x="450" y="1080" width="100" height="50" class="process" />
+  <text x="500" y="1110" text-anchor="middle" class="text-white">Select Filter</text>
+  
+  <!-- End -->
+  <rect x="450" y="1160" width="100" height="50" rx="25" ry="25" class="terminal" />
+  <text x="500" y="1190" text-anchor="middle" class="text-white">End</text>
+  
+  <!-- Flow Lines for Progress -->
+  <line x1="500" y1="880" x2="500" y2="910" class="flow-line" />
+  <line x1="550" y1="940" x2="600" y2="940" class="flow-line" />
+  <line x1="500" y1="970" x2="500" y2="1000" class="flow-line" />
+  <line x1="500" y1="1050" x2="500" y2="1080" class="flow-line" />
+  <line x1="500" y1="1130" x2="500" y2="1160" class="flow-line" />
+  <text x="570" y="930" class="text">No</text>
+  <text x="490" y="990" class="text">Yes</text>
+</svg>
