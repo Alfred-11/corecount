@@ -1,3 +1,4 @@
+Project category: Web-Based Fitness Management System
 CoreCount is a comprehensive web-based fitness application built with PHP and MySQL, 
 designed to help users achieve their fitness goals through structured workout programs, progress 
 tracking, and personalized scheduling.At its core, the application provides a diverse range of workout programs categorized into 
